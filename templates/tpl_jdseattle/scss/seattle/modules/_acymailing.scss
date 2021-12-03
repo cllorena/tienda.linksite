@@ -1,0 +1,39 @@
+// Horizontal Style
+div.acym_module_form {
+	.acym_form {
+		margin: 25px 0 0;
+		width: 100%;
+
+		input.cell {
+			width: 100%;
+			max-width: 100%;
+			padding: 7px;
+			border: 1px solid #ced4da;
+			border-radius: 0;
+			height: 45px;
+		}
+
+		.acysubbuttons {
+			.btn {
+				color: #fff;
+				border: 0 none;
+				width: 100%;
+				height: 45px;
+				border-radius: 0;
+
+				&.btn-primary {
+					background: $primary;
+				}
+			}
+		}
+	}
+
+	.acym__users__creation__fields__title {
+		display: none;
+	}
+
+	.cell {
+		display: block;
+		margin: 0;
+	}
+}

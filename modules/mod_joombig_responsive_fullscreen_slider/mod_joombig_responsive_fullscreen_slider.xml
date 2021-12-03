@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+  <name>joombig responsive fullscreen slider</name>
+  <author>joombig.com</author>
+  <creationDate>April 2014</creationDate>
+  <copyright>Copyright (C) 2014 joombig.com. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>support@joombig.com</authorEmail>
+  <authorUrl>www.joombig.com</authorUrl>
+  <version>1.1</version>
+  <description>MODULE_DESC</description>
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_joombig_responsive_fullscreen_slider.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_joombig_responsive_fullscreen_slider">mod_joombig_responsive_fullscreen_slider.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl/</folder>
+    <folder>fields/</folder>
+    <folder>helpers/</folder>
+    <folder>language/</folder>
+    <folder>assets/</folder>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="basic" addfieldpath="/modules/mod_joombig_responsive_fullscreen_slider/fields">
+        <field type="assets" url="/modules/mod_joombig_responsive_fullscreen_slider/assets" />
+        <field type="tmpl" name="sp_style" default="Responsivefullscreenslider"  label="STYLE" description="STYLE_DESC" />
+		<field name="enable_jQuery" type="radio" default="1" label="Enable/Disable jQuery" description="select Enable/Disable">
+			<option value="1">Enable</option>
+			<option value="0">Disable</option>
+		</field>
+		<field name="width_module" type="text" default="100%" label="Width of Module" description="Width of Module" />
+		<field name="height_module" type="text" default="500px" label="Height of Module" description="Height of Module" />
+		<field name="left_module" type="text" default="0%" label="Left of Module" description="Left of Module" />
+		<field name="auto_play" type="list" default="1" label="Autoplay" description="Yes/No autoplay slide">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+		<field name="time_transitions" type="text" default="4000" label="Time between transitions" description="Time between transitions" />
+		<field name="display_title" type="list" default="1" label="Show/hide Title" description="select show/hide">
+			<option value="1">show</option>
+			<option value="0">hide</option>
+		</field>
+		<field name="display_des" type="list" default="1" label="Show/hide Description" description="select show/hide">
+			<option value="1">show</option>
+			<option value="0">hide</option>
+		</field>
+		<field name="display_ball" type="list" default="1" label="Show/hide ball" description="select show/hide">
+			<option value="1">show</option>
+			<option value="0">hide</option>
+		</field>
+		<field name="imgscroll" type="media" default="" label="Change image ball" description="Select image" />
+      </fieldset>
+      <fieldset name="sliders" description="Setting for all item,Click Add New(require fill title)" label="Setting Item">
+        <field type="sliders" name="sliders" />
+      </fieldset>
+	  <fieldset name="animation">
+        <field type="animation" name="animation" />
+      </fieldset>
+      <fieldset name="advanced">	  
+		<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		<field name="module_cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+		<option value="1">JGLOBAL_USE_GLOBAL</option>
+		<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+		</field>
+		<field name="cache" type="hidden" default="1" />
+		<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+		<field name="cachemode" type="hidden" default="itemid">
+			<option value="itemid"></option>
+		</field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

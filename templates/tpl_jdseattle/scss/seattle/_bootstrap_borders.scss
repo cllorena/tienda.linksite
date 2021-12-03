@@ -1,0 +1,19 @@
+.border-dashed {
+   border: $border-width dashed $border-color !important;
+}
+
+.border-dashed-top {
+   border-top: $border-width dashed $border-color !important;
+}
+
+.border-dashed-right {
+   border-right: $border-width dashed $border-color !important;
+}
+
+.border-dashed-bottom {
+   border-bottom: $border-width dashed $border-color !important;
+}
+
+.border-dashed-left {
+   border-left: $border-width dashed $border-color !important;
+}

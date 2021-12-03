@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="FWMG_DOC_ADMIN_LAYOUTUSER">
+		<message>FWMG_DOC_ADMIN_LAYOUTUSER_HINT</message>
+	</layout>
+	<state>
+		<name>FWMG_DOC_ADMIN_LAYOUTUSER</name>
+		<description>FWMG_DOC_ADMIN_LAYOUTUSER_HINT</description>
+	</state>
+	<fields name="params">
+		<fieldset name="basic" addfieldpath="/administrator/components/com_fwgallery/elements">
+			<field type="fwusersectionlayout" name="layout" label="FWMG_DOC_ADMIN_LAYOUTUSER_LAYOUT" description="FWMG_DOC_ADMIN_LAYOUTUSER_LAYOUT_HINT" />
+			<field type="fwaddons" name="plugins" label="FWMG_MENU_ADDONS_ENABLED"/>
+ 		</fieldset>
+	</fields>
+</metadata>

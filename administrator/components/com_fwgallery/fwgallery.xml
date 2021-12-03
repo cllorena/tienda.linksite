@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+    <name>COM_FWGALLERY</name>
+    <creationDate>19 September 2021</creationDate>
+    <author>Fastw3b - Effective Web Solutions</author>
+    <authorEmail>dev@fastw3b.net</authorEmail>
+    <authorUrl>https://www.fastw3b.net</authorUrl>
+    <copyright>(C) 2021 Fastw3b LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>6.7.2</version>
+    <description>COM_FWGALLERY_HINT</description>
+    <install type="component">
+        <sql>
+            <file driver="mysql" charset="utf8">install.sql</file>
+        </sql>
+    </install>
+    <scriptfile>install.php</scriptfile>
+    <files folder="site">
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>fwgallery.php</filename>
+        <filename>router.php</filename>
+        <folder>assets</folder>
+        <folder>helpers</folder>
+		<folder>layouts</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+	<languages folder="site/language">
+        <language tag="en-GB">en-GB/en-GB.com_fwgallery.ini</language>
+	</languages>
+    <administration>
+        <menu>FWMG_FWGALLERY</menu>
+        <submenu>
+            <menu view="fwgallery">FWMG_DASHBOARD</menu>
+            <menu view="addon">FWMG_ADDONS</menu>
+            <menu view="category">FWMG_CATEGORIES</menu>
+            <menu view="file">FWMG_FILES</menu>
+            <menu view="tag">FWMG_TAGS</menu>
+            <menu view="data">FWMG_DATA</menu>
+            <menu view="css">FWMG_CSS</menu>
+            <menu view="translation">FWMG_TRANSLATIONS</menu>
+            <menu view="configuration">FWMG_SETTINGS</menu>
+        </submenu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>install.sql</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>fwgallery.php</filename>
+            <folder>assets</folder>
+            <folder>elements</folder>
+            <folder>helpers</folder>
+            <folder>layouts</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_fwgallery.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_fwgallery.sys.ini</language>
+		</languages>
+		<media destination="com_fwgallery" folder="media">
+			<file>index.html</file>
+		</media>
+    </administration>
+	<updateservers>
+		<server type="collection" priority="1" name="FW Gallery"><![CDATA[https://fastw3b.net/index.php?option=com_fwsales&view=updates&layout=package&format=raw&package=com_fwgallery&dummy=extension.xml]]></server>
+	</updateservers>
+</extension>

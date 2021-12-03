@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>BgMax</name>
+    <version>4</version>
+    <creationDate>15-09-2021</creationDate>
+    <firstDate>17-03-2011</firstDate>
+    <author>LMC-lomart</author>
+    <authoremail>lomart@lomart.fr</authoremail>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>BGMAX_DESC</description>
+    <description2>merci à www.webbricks.org pour son javascript bgmax</description2>
+    <files>
+        <filename>mod_bgmax.xml</filename>
+        <filename module="mod_bgmax">mod_bgmax.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>bgMax.min.js</filename>
+        <filename>bgMax.gif</filename>
+        <filename>changelog.txt</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <folder>elements</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params" >
+            <fieldset name="basic" addfieldpath="/modules/mod_bgmax/elements/">
+                <field name="bgmaxDebug" type="list" default="0" label="Debug" description="DEBUG_DESC">
+                    <option value="0">DEBUG_NO</option>
+                    <option value="1">DEBUG_YES</option>
+                    <option value="2">DEBUG_CONNECT</option>
+                </field>
+
+                <field type="xtitle" title="IMG_TITRE"  subtitle="IMG_NOTE" />
+                <field name="image_path" type="media"
+                       hide_default="1"  size="40"
+                       label="IMAGE" description="IMAGE_DESC" />
+                <field name="image_url" type="text"  size="40"
+                       label="URL" description="URL_DESC" />
+                <field name="RandomFolder" type="folderlistmakedir" default=""
+                       label="RANDOM" description="RANDOM_DESC" directory="images/bgmax" hide_default="true" />
+
+                <field type="xnote" note="RAMDOM_INFO" style="color:blue" />
+
+                <field name="bodyColor" type="color" label="BODYCOLOR" description="BODYCOLOR_DESC" />
+                <field name="bodyColorAuto" type="radio" default="0" label="BODYCOLORAUTO"
+                       description="BODYCOLORAUTO_DESC" class="btn-group radio btn-group-toggle">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="xnote" note="COLORAUTOYES" style="color:red" />
+
+				; =================== taille et position
+				
+                <field type="xtitle" title="POS_TITRE" />
+                <field name="mode" type="list" default="max" label="MODE"
+                       description="MODE_DESC">
+                    <option value="max">MODE_MAX</option>
+                    <option value="full">MODE_FULL</option>
+                    <option value="no-repeat">MODE_NONE</option>
+                    <option value="repeat">MODE_REPEAT</option>
+                    <option value="repeat-x">MODE_REPEATX</option>
+                    <option value="repeat-y">MODE_REPEATY</option>
+                    <option value="cover">MODE_COVER</option>
+                </field>
+                <field name="position" type="list" default="absolute" label="POSITION"
+                       description="POSITION_DESC">
+                    <option value="absolute">POSITION_ABS</option>
+                    <option value="fixed">POSITION_FIX</option>
+                </field>
+                <field name="align" type="list" default="center" label="ALIGN"
+                       description="ALIGN_DESC">
+                    <option value="left">ALIGN_LEFT</option>
+                    <option value="center">ALIGN_CENTER</option>
+                    <option value="right">ALIGN_RIGHT</option>
+                </field>
+                <field name="vertAlign" type="list" default="top" label="VERTALIGN"
+                       description="VERTALIGN_DESC">
+                    <option value="top">VALIGN_TOP</option>
+                    <option value="center">VALIGN_CENTER</option>
+                    <option value="bottom">VALIGN_BOTTOM</option>
+                </field>
+				
+                <field type="xnote" note="JS_ONLY" style="color:blue;" />
+                <field name="enlarge" type="radio" default="1" label="ENLARGE"
+                       description="ENLARGE_DESC" class="btn-group radio btn-group-toggle">
+                    <option value="0">JNO</option>
+                    <option value="1">AUTHORIZED</option>
+                </field>
+                <field name="reduce" type="radio" default="0" label="REDUCE"
+                       description="REDUCE_DESC" class="btn-group radio btn-group-toggle">
+                    <option value="0">JNO</option>
+                    <option value="1">AUTHORIZED</option>
+                </field>
+                <field name="zIndex" type="text" default="-1" size="5"
+                       label="ZINDEX" description="ZINDEX_DESC" />
+                <field name="ffHack" type="text" default="0px" size="5"
+                       label="FFHACK" description="FFHACK_DESC" />
+
+				; ==================== FONDU
+                <field type="xtitle" title="FADE_TITRE" subtitle="FADE_SOUTITRE"/>
+                <field name="fadeActive" type="radio" default="0" label="FADEACTIVE" description="FADEACTIVE_DESC" class="btn-group radio btn-group-toggle">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="fadeAfter" type="text" default="0" size="5"
+                       label="FADEAFTER" description="FADEAFTER_DESC" />
+                <field name="fadeDuration" type="text" default="1000"  size="5"
+                       label="FADEDURATION" description="FADEDURATION_DESC" />
+                <field name="fadeFrameRate" type="text" default="30" size="5"
+                       label="FADEFRAMERATE" description="FADEFRAMERATE_DESC" />
+				; ===================== SELECTEUR
+                <field type="xtitle" title="CONTENT_TITRE" subtitle="CONTENT_SOUTITRE" />
+                <field name="contentSelector" type="text" default=""  size="60"
+                       label="CONTENTSELECTOR" description="CONTENTSELECTOR_DESC" />
+                <field name="contentColor" type="color"
+                       label="CONTENTCOLOR" description="CONTENTCOLOR_DESC" />
+                <field name="contentOpacity" type="text" default="100%"  size="10"
+                       label="CONTENTOPACITY" description="CONTENTOPACITY_DESC" />
+                <field name="contentWidth" type="text" default=""  size="10"
+                       label="CONTENTWIDTH" description="CONTENTWIDTH_DESC" />
+                <field name="contentAlign" type="list" default="center"
+                       label="CONTENTALIGN" description="CONTENTALIGN_DESC">
+                    <option value="left">ALIGN_LEFT</option>
+                    <option value="center">ALIGN_CENTER</option>
+                    <option value="right">ALIGN_RIGHT</option>
+                </field>
+				; ======================== CODE
+                <field type="xtitle" title="HEAD_TITRE" subtitle="HEAD_SOUTITRE" />
+                <field name="headOther" type="textarea" filter="raw" disabled="false" default="" rows="8" cols="60" label="HEADOTHER" description="HEADOTHER_DESC" />
+                <field name="headFile" type="filelist" label="HEADFILE" description="HEADFILE_DESC" directory="images/bgmax" filter="\.txt" hide_default="true" />
+				; ========================= CONDITION
+                <field type="xtitle" title="FILTER_TITRE" subtitle="FILTER_SOUTITRE"/>
+                <field name="filterMobile" type="list" default="always"
+                       label="FILTER_MOBILE_LABEL" description="FILTER_MOBILE_DESC">
+                    <option value="always">FILTER_ALWAYS</option>
+                    <option value="mobile">FILTER_MOBILE</option>
+                    <option value="desktop">FILTER_DESKTOP</option>
+                </field>
+                <field name="filterContent" type="textarea" default="" rows="4" cols="60" label="FILTER_LABEL" description="FILTER_DESC" />
+                <field type="xnote" note="FILTER_NOTE"/>
+
+				;========================= PERIODE
+                <field type="xtitle" title="PERIOD_DESC" subtitle="PERIOD_SOUDESC" />
+                <field type="xnote" note="PERIOD_DESC_2" />
+                <field name="debDate" type="text" default=""
+                       label="DEBDATE"  />
+                <field name="debTime" type="text" default="" size="5" format="99:99"
+                       label="DEBTIME"  />
+                <field name="endDate" type="text" default=""
+                       label="ENDDATE" />
+                <field name="endTime" type="text" default="" size="5" format="99:99"
+                       label="ENDTIME" />
+                <field name="period_mode" type="radio" default="0" label="PERIOD_MODE" description="PERIOD_MODE_DESC" class="btn-group radio btn-group-toggle">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                    name="cache"
+                    type="list"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC"
+                    default="1"
+                >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                    name="cache_time"
+                    type="number"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+                    default="900"
+                />
+
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static"
+                >
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" name="bgmax" priority="1">https://lomart.fr/files/bgmax/bgmax_update.xml
+        </server>
+    </updateservers>
+
+</extension>

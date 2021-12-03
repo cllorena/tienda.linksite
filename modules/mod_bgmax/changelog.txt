@@ -1,0 +1,51 @@
+4 (sept 2021)
+- compatibilité Joomla 4t php 8
+
+3.2.5 (dev 2017)
+- modif nom fonction (conflit avec autres extensions)
+- ajout param cache
+- maj element xtitle
+
+3.2.4 (dec 2016)
+- ajout update server
+
+3.2.3 (jan 2015)
+- correction notice undefined variable
+
+3.2.2 (27/11/13)
+- possibilité de périodes réccurentes hebdomadaires, mensuelles ou annuelles
+- suppression android dans chaine des devices mobile pour autoriser tablette
+- correction passage par référence
+
+3.2.1 (1/11/13)
+- correction langage pour J3.2
+- ajout URL pour image
+
+3.2 (5/6/13)
+- correction traduction US pour random
+3.2 (13/01/13)
+- ajout mode cover (CSS3)
+- mise en évidence des paramètres pour JS et CSS
+
+3.1 (2/12/12)
+- ajout critère mobile
+- correction rapport strict standards
+
+3.0 (28/09/12)
+- compatibilité Joomla 3.0
+- correction documentation
+
+1.7.2 (22/02/12)
+- Prise en compte d'une opacité à 0%
+- Couleur sous image par défaut (blanc) si non spécifiée
+- Modification du message affiché sur le site par l'option 'debug' pour éviter 
+  que certaines personnes y voient une erreur.
+- correction bug chemin images aléatoires
+
+1.7.1 (22/02/12)
+- Le dossier images aléatoires est un sous dossier de images/bgmax
+
+1.7.0 (16/02/12)
+- Prise en compte d'une opacité à 0%
+- Couleur sous image par défaut (blanc) si non spécifiée
+- Modification du message affiché sur le site par l'option 'debug' pour éviter que certaines personnes y voient une erreur.

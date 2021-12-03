@@ -1,0 +1,27 @@
+#wpwrap #adminmenu div.wp-menu-image img {
+    width: 16px;
+}
+#wpbody-content #fw-admin {
+    margin-right: 1rem;
+    -moz-osx-font-smoothing: grayscale;
+}
+#wpbody-content #fw-admin .card-review {
+    display: none;
+}
+#wpbody-content .fwcss a {
+    box-shadow: none;
+}
+#wpbody-content .fwa-mb-cardbox > div > .card {
+    min-width: 100%;
+    padding: 0;
+    margin-top: 0;
+}
+#wpbody-content .fwcss table td {
+    line-height: 18px;
+}
+#wpbody-content .fwcss .fwa-main-body .nav-tabs .nav-item {
+    margin-bottom: -1px;
+}
+#wpbody-content .fwcss .fwmg-watermark img {
+    max-width: 100%;
+}

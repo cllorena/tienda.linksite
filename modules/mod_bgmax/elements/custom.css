@@ -1,0 +1,21 @@
+.param-title-default {
+    width: 100%; /* important */
+    padding: 10px;
+    background-color: #1A466B;
+    border-left: red 10px solid;
+    color: #ccc;
+}
+/* le titre */
+.param-title-default > * {
+    margin:5px 0;
+    color: #fff;
+}
+
+.param-note-default {
+   width: 100%; /* important */
+   padding: 10px 0;
+   font-weight:normal;
+}
+.controls textarea {
+   width: 100%;
+}

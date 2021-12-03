@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+    <name>Full Screen Background Image</name>
+    <author>LogicHunt</author>
+    <creationDate>June, 2021</creationDate>
+    <copyright>Copyright (C) 2014 - 2021 LogicHunt. All rights reserved.</copyright>
+    <license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>logichunt.info@gmail.com</authorEmail>
+    <authorUrl>http://logichunt.com</authorUrl>
+    <version>1.0.0</version>
+    <description>
+        <![CDATA[
+		<div style='text-align: left;'>
+         <h2 style="margin:25px 0 15px 0;">Take a look at <a href="https://logichunt.com/product/joomla-fullscreen-video-background/" target="_blank" title="Visit logichunt.com!"><b>Fullscreen Video Background</b></a> for Joomla 3.x  & 4.x</h3>
+        <p style="line-height:24px;font-size:16px;margin: 15px 0 25px;">This premium module can display full screen <b>videos</b>, <b>audio</b>, <b>images</b>, and <b>color backgrounds</b>. Supported videos are from <b>YouTube</b>, <b>Vimeo</b>,<b>Wistia</b>, <b>Dailymotion</b>, and <b>HTML5</b> Videos.</p>
+
+		<h4><span><strong>Useful Links:</strong></span> </h4>
+		<ul class="inline list-inline">
+			<li  class="list-inline-item"><a class="btn btn-primary" target="_blank" href="https://logichunt.com/support/">Get Support</a></li>
+			<li  class="list-inline-item"><a  class="btn btn-info"  target="_blank" href="https://logichunt.com/product/joomla-full-screen-background-image/">Product Page</a></li>
+			<li  class="list-inline-item"><a class="btn btn-success" target="_blank" href="https://logichunt.com/documentation/">Documentation</a></li>
+                <li  class="list-inline-item"><a class="btn btn-danger" target="_blank" href="https://logichunt.com/product/joomla-fullscreen-video-background/"> Upgrade to Pro!</a></li>
+		</ul>
+		<p>Copyright 2014 - 2021 <a href="https://www.logichunt.com/" target="_blank" title="Visit logichunt.com!"><b>logichunt.com</b></a></p>
+
+		</div>
+
+	 ]]>
+    </description>
+    <files>
+        <filename module="mod_lgx_full_screen_background_image">mod_lgx_full_screen_background_image.php</filename>
+        <folder>fields</folder>
+        <folder>assets</folder>
+        <folder>helper</folder>
+        <folder>language</folder>
+        <filename>index.html</filename>
+        <filename>mod_lgx_full_screen_background_image.xml</filename>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_lgx_full_screen_background_image.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_lgx_full_screen_background_image.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_lgx_full_screen_background_image/fields">
+
+            <fieldset name="basic">
+                <field type="spacer" name="style_spacer_layout" label="&lt;b&gt; Full Screen  Background Image Source &lt;/b&gt;" />
+
+                <field name="mediaPlayerType"
+                       type="list"
+                       default="Image"
+                       label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_TYPE_LABEL"
+                       description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_TYPE_DESC">
+                    <option value="Image">Image</option>
+                    <option value="YouTube">YouTube - Pro Feature</option>
+                    <option value="">Vimeo - Pro Feature</option>
+                    <option value="">Dailymotion - Pro Feature</option>
+                    <option value="">Wistia - Pro Feature</option>
+                    <option value="">HTML5 - Pro Feature</option>
+                </field>
+
+                <field
+                        name="mediaId_img"
+                        type="media"
+                        showon="mediaPlayerType:Image"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_ID_IMAGE_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_ID_IMAGE_DESC"/>
+
+
+
+                <field type="spacer" name="style_spacer_mediaOverlay" label="&lt;b&gt;Advanced Custom Style &lt;/b&gt;" />
+
+
+                <field
+                        name="mediaOverlay"
+                        type="radio"
+                        default="1"
+                        class="btn-group"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_ID_MEDIA_OVERLAY_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_ID_MEDIA_OVERLAY_DESC" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="mediaOverlayCss"
+                       showon="mediaOverlay:1"
+                       type="list"
+                       default="transparent"
+                       label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_ID_MEDIA_OVERLAY_CSS_PATTERN_LABEL"
+                       description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_ID_MEDIA_OVERLAY_CSS_PATTERN_DESC">
+                    <option value="transparent">Transparent</option>
+                    <option value="3px-tile">3px Tile</option>
+                    <option value="diagonal">Diagonal</option>
+                    <option value="diagonal-dark">diagonal-dark</option>
+                    <option value="diagonal-wide">diagonal-wide</option>
+                    <option value="dotnoise-light-grey">Dot Noise Light Grey</option>
+                    <option value="dots1">Dots 1</option>
+                    <option value="dots2">Dots 2</option>
+                    <option value="dots3">Dots 3</option>
+                    <option value="dots4">Dots 4</option>
+                    <option value="dots4-dark">Dots 4 - Dark</option>
+                    <option value="fabric-of-squares">Fabric of Squares</option>
+                    <option value="first-aid-kit">First Aid Kit</option>
+                    <option value="french-stucco">French Stucco</option>
+                    <option value="graphy-dark">Graphy Dark</option>
+                    <option value="green-dust-and-scratches">Green Dust and Scratches</option>
+                    <option value="green-fibers">Green Fibers</option>
+                    <option value="grey-jean">Grey Jean</option>
+                    <option value="grid">Grid</option>
+                    <option value="grid-noise">Grid Noise</option>
+                    <option value="groovepaper">Groove Paper</option>
+                    <option value="grunge-wall">Grunge Wall</option>
+                    <option value="hexellence">Hexellence</option>
+                    <option value="inflicted">Inflicted</option>
+                    <option value="light-sketch">Light Sketch</option>
+                    <option value="light-wool">Light Wool</option>
+                    <option value="lines">Lines</option>
+                    <option value="pattern1">Pattern1</option>
+                    <option value="pattern2-a">Pattern2-A</option>
+                    <option value="pattern2-b">Pattern2-B</option>
+                    <option value="pattern3-a">Pattern3-C</option>
+                    <option value="pattern3-b">Pattern3-D</option>
+                    <option value="small-diamond">Small Diamond</option>
+                    <option value="square-grid">Square Grid</option>
+                    <option value="stairs">Stairs</option>
+                    <option value="subtle-grey">Subtle Grey</option>
+                    <option value="textured-stripes">Textured Stripes</option>
+                    <option value="wave-grid">Wave Grid</option>
+                    <option value="wavecut">Wave Cut</option>
+                    <option value="white-diamond">White Diamond</option>
+                    <option value="wine-cork">Wine Cork</option>
+                    <option value="wood-pattern">Wood Pattern</option>
+                    <option value="xv">XV</option>
+                </field>
+
+                <field
+                        name="mediaOverlayColor"
+                        type="color"
+                        default="#000000"
+                        showon="mediaOverlay:1"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_ID_MEDIA_OVERLAY_COLOR_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_ID_MEDIA_OVERLAY_COLOR_DESC" />
+
+                <field
+                        name="mediaOverlayColor_opacity"
+                        type="number"
+                        default="0.4"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        showon="mediaOverlay:1"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_ID_MEDIA_OVERLAY_COLOR_OPACITY_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_ID_MEDIA_OVERLAY_COLOR_OPACITY_DESC"  />
+
+
+                <field type="spacer" name="style_spacer_custom_style" label="&lt;b&gt;Overlay and Background Color&lt;/b&gt;" />
+
+                <field name="custom_style"
+                       type="textarea"
+                       hint=".myclass { margin: 0; }"
+                       label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_CUSTOM_STYLE_LABEL"
+                       description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_CUSTOM_STYLE_DESC"
+                       rows="9" cols="9"
+                       filter="raw"/>
+            </fieldset>
+
+
+
+
+
+            <fieldset name="page_settings" label="MOD_LGX_FULLSCREEN_VIDEO_PAGE_SETTINGS_LABEL" description="MOD_LGX_FULLSCREEN_VIDEO_PAGE_SETTINGS_DESC" >
+
+                <field type="spacer" name="style_spacer_pud" label="&lt;b&gt;Page Up Down Settings&lt;/b&gt;" />
+
+                <field
+                        name="pud"
+                        type="radio"
+                        default="1"
+                        class="btn-group"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PUD_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PUD_DESC" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="pudElement"
+                       type="text"
+                       default=".container"
+                       showon="pud:1"
+                       label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PUD_ELEMENT_LABEL"
+                       description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PUD_ELEMENT_DESC"/>
+
+                <field
+                        name="pudDown"
+                        type="radio"
+                        showon="pud:1"
+                        default="0"
+                        class="btn-group"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PUD_DOWN_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PUD_DOWN_DESC" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="pudUp"
+                        type="radio"
+                        showon="pud:1"
+                        default="1"
+                        class="btn-group"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PUD_UP_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PUD_UP_DESC" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="pudShow"
+                       type="number"
+                       default="0"
+                       showon="pud:1"
+                       label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PUD_SHOW_LABEL"
+                       description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PUD_SHOW_DESC"/>
+
+                <field type="spacer" name="style_spacer_fio" label="&lt;b&gt;Fade In Out Settings&lt;/b&gt;" />
+
+                <field
+                        name="fio"
+                        type="radio"
+                        default="1"
+                        class="btn-group"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_FIO_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_FIO_DESC" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="fioElement"
+                       type="text"
+                       default="#page"
+                       showon="fio:1"
+                       label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_FIO_ELEMENT_LABEL"
+                       description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_FIO_ELEMENT_DESC"/>
+
+                <field
+                        name="fioOpacity"
+                        showon="fio:1"
+                        type="number"
+                        default="0.5"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_FIO_OPACITY_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_FIO_OPACITY_DESC"  />
+
+                <field
+                        name="fioStart"
+                        type="radio"
+                        showon="fio:1"
+                        default="0"
+                        class="btn-group"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_FIO_START_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_FIO_START_DESC" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="fioEnd"
+                        type="radio"
+                        default="1"
+                        showon="fio:1"
+                        class="btn-group"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_FIO_END_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_FIO_END_DESC" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+
+                <field name="mediaLink"
+                       type="text"
+                       default=""
+                       label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_LINK_LABEL"
+                       description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_LINK_DESC"/>
+
+                <field name="mediaLinkTarget"
+                       type="list"
+                       default="_blank"
+                       label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_LINK_TARGET_LABEL"
+                       description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_MEDIA_LINK_TARGET_DESC">
+                    <option value="_blank">LGX_NEW_WINDOW</option>
+                    <option value="_self">LGX_CURRENT_WINDOW</option>
+                </field>
+
+
+            </fieldset>
+
+
+
+            <fieldset name="controller_settings" label="MOD_LGX_FULLSCREEN_VIDEO_CONTROLLER_SETTINGS_LABEL" description="MOD_LGX_FULLSCREEN_VIDEO_CONTROLLER_SETTINGS_DESC" >
+
+                <field
+                        name="displayControls"
+                        type="radio"
+                        default="1"
+                        class="btn-group"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_DISPLAY_CONTROL_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_DISPLAY_CONTROL_DESC" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="placeControls"
+                       showon="displayControls:1"
+                       type="list"
+                       default="br"
+                       label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PLACE_CONTROL_LABEL"
+                       description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_PLACE_CONTROL_DESC">
+                    <option value="br">Bottom Right</option>
+                    <option value="bl">Bottom Left</option>
+                    <option value="tr ">Top Right</option>
+                    <option value="tl ">Top Left</option>
+                </field>
+
+
+                <field
+                        name="controlColor"
+                        type="color"
+                        default="#ffffff"
+                        showon="displayControls:1"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_CONTROL_COLOR_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_CONTROL_COLOR_DESC" />
+
+                <field
+                        name="controlColor_opacity"
+                        type="number"
+                        default="0.8"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        showon="displayControls:1"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_CONTROL_COLOR_OPACITY_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_CONTROL_COLOR_OPACITY_DESC"  />
+
+                <field
+                        name="controlBgColor"
+                        type="color"
+                        default="#27add3"
+                        showon="displayControls:1"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_CONTROL_BG_COLOR_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_CONTROL_BG_COLOR_DESC" />
+
+                <field
+                        name="controlBgColor_opacity"
+                        type="number"
+                        default="0.7"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        showon="displayControls:1"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_CONTROL_BG_COLOR_OPACITY_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_CONTROL_BG_COLOR_OPACITY_DESC"  />
+
+                <field
+                        name="enableScrollToTopButton"
+                        type="radio"
+                        default="1"
+                        class="btn-group"
+                        label="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_ENABLE_SCROLL_TOP_BTN_LABEL"
+                        description="MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE_ENABLE_SCROLL_TOP_BTN_DESC" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="lgxfullbgiamgesubform" type="lgxsubform" />
+
+            </fieldset>
+
+
+            <fieldset name="advanced">
+
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea" rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="1"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                        name="cache_time"
+                        type="text"
+                        default="900"
+                        label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static">
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" name="Counter Up">http://logichunt.net/logichub/manifest_MOD_LGX_FULL_SCREEN_BACKGROUND_IMAGE.xml</server>
+    </updateservers>
+</extension>

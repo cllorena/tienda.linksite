@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="FWMG_DOC_ADMIN_LAYOUTFILE">
+		<message>FWMG_DOC_ADMIN_LAYOUTFILE_HINT</message>
+	</layout>
+	<state>
+		<name>FWMG_DOC_ADMIN_LAYOUTFILE</name>
+		<description>FWMG_DOC_ADMIN_LAYOUTFILE_HINT</description>
+	</state>
+	<fields name="params">
+		<fieldset name="basic" addfieldpath="/administrator/components/com_fwgallery/elements">
+            <field name="file_id" type="sql" query="SELECT id, CONCAT(name,' [',type,'][',id,']') AS name FROM #__fwsg_file WHERE published=1 ORDER BY ordering" label="FWMG_DOC_ADMIN_LAYOUTFILE_FILE" description="FWMG_DOC_ADMIN_LAYOUTFILE_FILE_HINT" key_field="id" value_field="name" />
+			<field type="fwaddons" name="plugins" label="FWMG_DOC_ADMIN_LAYOUTFILE_ADDONS" desciption="FWMG_DOC_ADMIN_LAYOUTFILE_ADDONS_HINT"/>
+ 		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,23 @@
+.product-action-btn{
+    .buy{
+        background-color: #fff;
+        color: $primary;
+        font-weight: 600;
+    }
+}
+
+// Cart View
+.cart-items-table {
+    .cart-item-prices {
+        padding: 0;
+        li:first-child {
+         margin-left: 0;
+        }
+        li:last-child {
+         margin-left: 0;
+        }
+    }
+    th, td {
+        padding: 20px !important;
+    }
+}

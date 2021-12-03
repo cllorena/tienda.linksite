@@ -1,0 +1,23 @@
+## xtitle
+
+- title       titre 
+- subtitle    sous-titre
+- class       remplace la classe par défaut "param-title-default"
+- style       permet de surcharger ponctuellement
+- heading     balise pour titre. H3 par défaut
+
+## xnote
+
+- note        texte de la note
+- class       remplace la classe par défaut "param-title-default"
+- style       permet de surcharger ponctuellement
+- heading     balise pour titre. P par défaut
+
+## .controls textarea
+- force la largeur des textarea sur Joomla 3
+
+--- note 
+il est possible de modifier le fichier custom.css pour une extension
+
+## IMPORTANT 
+Ne pas utiliser label et description, mais title, subtitle et note

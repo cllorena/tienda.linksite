@@ -1,0 +1,59 @@
+/**
+ * UMBG-Slider v1.1 CSS Document
+ *
+ * http://codecanyon.net/user/theefarmer?ref=theefarmer
+ * http://theefarmer.com
+ *
+ * Author: TheeFarmer | Alendee Internet Solutions
+ * Copyright: (c) 2015 Alendee Internet Solutions
+ *
+ * Last Change: 2015-09-22 - Removed .umbg-slider-container background color.
+ *              2015-05-25 - Initial release
+ **/
+
+/*------------------------------------------------------------------------------
+    Table of Contents
+
+    1. Slider
+
+------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+    1. Slider Styles
+------------------------------------------------------------------------------*/
+
+.umbg-slider-container {
+	/*width: 100%;*/
+	/*height: auto;*/
+	/*background: #000;*/
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+.umbg-slider-container div {
+	left: 0;
+	line-height: 0;
+	position: absolute;
+	display: none;
+	top: 0;
+	width: 100%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.umbg-slider-container img {
+	width: 100%;
+	height: auto;
+}
+
+.notrans {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	transition: none !important;
+}
