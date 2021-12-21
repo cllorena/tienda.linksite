@@ -32,7 +32,7 @@ class JConfig {
 	public $offset = 'UTC';
 	public $mailonline = '1';
 	public $mailer = 'mail';
-	public $mailfrom = 'claudio.llorena@gmail.com';
+	public $mailfrom = 'claudia.llorenar@gmail.com';
 	public $fromname = 'LInksite Market';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '1';
